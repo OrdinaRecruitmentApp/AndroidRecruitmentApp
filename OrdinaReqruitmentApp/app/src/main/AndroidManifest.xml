@@ -20,6 +20,11 @@
             android:name=".WaaromOrdinaActivity"
             android:label="@string/title_activity_waarom_ordina" >
         </activity>
+
+        <activity
+            android:name=".WatDoetOrdinaActivity"
+            android:label="WatDoetOrdinaActivity" >
+        </activity>
     </application>
 
 </manifest>
