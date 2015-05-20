@@ -9,7 +9,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_no_actionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,12 +20,45 @@
         </activity>
         <activity
             android:name=".WaaromOrdinaActivity"
-            android:label="@string/title_activity_waarom_ordina" >
+            android:label="@string/title_activity_waarom_ordina"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
         </activity>
-
         <activity
             android:name=".WatDoetOrdinaActivity"
-            android:label="WatDoetOrdinaActivity" >
+            android:label="WatDoetOrdinaActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".YoungProfessionalProgramma"
+            android:label="@string/title_activity_young_professional_programma"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="yp.ordina.nl.ordinareqruitmentapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".yp.ordina.nl.ordinareqruitmentapp.watdoetordina.AfdelingenActivity"
+            android:label="@string/title_activity_afdelingen"
+            android:parentActivityName=".WatDoetOrdinaActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".yp.ordina.nl.ordinareqruitmentapp.watdoetordina.KlantenActivity"
+            android:label="@string/title_activity_klanten"
+            android:parentActivityName=".WatDoetOrdinaActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".yp.ordina.nl.ordinareqruitmentapp.watdoetordina.ProjectenActivity"
+            android:label="@string/title_activity_projecten"
+            android:parentActivityName=".WatDoetOrdinaActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="yp.ordina.nl.ordinareqruitmentapp.WatDoetOrdinaActivity" />
         </activity>
     </application>
 

@@ -9,4 +9,37 @@
     <TextView android:text="Wat doet ordina" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_afdelingen"
+        android:id="@+id/button_afdelingen"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="147dp"
+        android:onClick="startAfdelingenActivity"
+        android:background="#E98300" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_klanten"
+        android:id="@+id/button_klanten"
+        android:layout_marginTop="51dp"
+        android:onClick="startKlantenActivity"
+        android:background="#E98300"
+        android:layout_below="@+id/button_afdelingen"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_projecten"
+        android:id="@+id/button3"
+        android:layout_marginTop="51dp"
+        android:onClick="startProjectenActivity"
+        android:background="#E98300"
+        android:layout_below="@+id/button_klanten"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

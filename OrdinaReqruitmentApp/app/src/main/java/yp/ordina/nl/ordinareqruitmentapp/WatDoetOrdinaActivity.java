@@ -1,9 +1,15 @@
 package yp.ordina.nl.ordinareqruitmentapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import yp.ordina.nl.ordinareqruitmentapp.yp.ordina.nl.ordinareqruitmentapp.watdoetordina.AfdelingenActivity;
+import yp.ordina.nl.ordinareqruitmentapp.yp.ordina.nl.ordinareqruitmentapp.watdoetordina.KlantenActivity;
+import yp.ordina.nl.ordinareqruitmentapp.yp.ordina.nl.ordinareqruitmentapp.watdoetordina.ProjectenActivity;
 
 
 public class WatDoetOrdinaActivity extends ActionBarActivity {
@@ -21,6 +27,7 @@ public class WatDoetOrdinaActivity extends ActionBarActivity {
         return true;
     }
 
+    //Deze hele methode kan waarschijnlijk weg omdat we de settings button niet gebruiken en waarschijnlijk ook geen andere buttons
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -29,10 +36,26 @@ public class WatDoetOrdinaActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //Settings in xml files uit gecomment
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void startAfdelingenActivity(View view){
+        Intent intent = new Intent(this, AfdelingenActivity.class);
+        startActivity(intent);
+    }
+    public void startKlantenActivity(View view){
+        Intent intent = new Intent(this, KlantenActivity.class);
+        startActivity(intent);
+    }
+
+    public void startProjectenActivity(View view){
+        Intent intent = new Intent(this, ProjectenActivity.class);
+        startActivity(intent);
     }
 }
